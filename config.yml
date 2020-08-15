@@ -1,13 +1,13 @@
-title: # a name for your Learning Lab course
-tagline: # a short description for your Learning Lab course, displayed on the course catalog
-description: # a longer description for your Learning Lab course, displayed on the course's landing page
+title: Markdown Introduction (Git Lab Tutorial)
+tagline: Short introduction to Markdown. 
+description: Learn all about markdown and learn how to utilize its basic syntaxes to create and write your own markdown files. 
 
 # Repository setup
 # The following section template information for the repository
 # This will be used when the repository is crated for each individual learner
 
 template:
-  name:     # gitlabtutorial
+  name:     # markdowngitlab
   repo:     # template
 
 # `before` block
