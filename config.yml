@@ -23,7 +23,7 @@ before:
 # Create one step for each action that a learner will complete
 
 steps:
-# Step 1: Introduction
+Step 1: Introduction
 - title: Markdown Introduction
   description: a simple introduction explaining what markdown is and what it is used for
   event: issue_comment
