@@ -1,21 +1,21 @@
-title: # a name for your Learning Lab course
-tagline: # a short description for your Learning Lab course, displayed on the course catalog
-description: # a longer description for your Learning Lab course, displayed on the course's landing page
+title: Markdown Introduction (Git Lab Tutorial)
+tagline: Short introduction to Markdown. 
+description: Learn all about markdown and learn how to utilize its basic syntaxes to create and write your own markdown files. 
 
 # Repository setup
 # The following section template information for the repository
 # This will be used when the repository is crated for each individual learner
 
 template:
-  name:     # gitlabtutorial
+  name:     # markdowngitlab
   repo:     # template
 
 # `before` block
 # Actions to take place after the learner registers, but before they start interacting with their repo
 
 before:
-- type: # the type of action, full list at https://lab.github.com/docs/actions/
-  # some actions require additional options, those should appear below `type:`
+- type: respond
+  with: 01_first-response.md
   # you can execute multiple actions in the `before` block
 
 # Steps for the course
@@ -24,37 +24,46 @@ before:
 
 steps:
 # Step 1: Introduction
-- title: # Markdown Introduction
-  description: # a simple introduction explaining what markdown is and what it is used for
-  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
+- title: Markdown Introduction
+  description: a simple introduction explaining what markdown is and what it is used for
+  event: issue_comment
   actions: # a list of the actions that will occur when the step is triggered by an event
   - type: # the type of action, full list at https://lab.github.com/docs/actions
-
+  - type: gate
+    left: %payload.issue.title%
+    operator: ===
+    right: Add name to README
+    else:
+    - type: respond
+      with: 01_try-again.md
+  - type: respond
+    with: 01_nice-work.md
+    
 # Step 2: Importance
-# - title: # Importance of Markdown
-#  description: # explanation of why markdown is an essential tool relating to individuals and companies
-#  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
+# - title: Importance of Markdown
+#  description: explanation of why markdown is an essential tool relating to individuals and companies
+#  event: issue_comment
 #  actions: # a list of the actions that will occur when the step is triggered by an event
 #  - type: # the type of action, full list at https://lab.github.com/docs/actions
 
 # Step 3: Basics
-# - title: # Basics of Markdown
-#  description: # Introducing the basic syntaxes of markdown that are much more commonly used
-#  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
+# - title: Basics of Markdown
+#  description: Introducing the basic syntaxes of markdown that are much more commonly used
+#  event: pull_request
 #  actions: # a list of the actions that will occur when the step is triggered by an event
 #  - type: # the type of action, full list at https://lab.github.com/docs/actions
 
 # Step 4: Intermediate
-# - title: # Intermediate Syntaxes of Markdown
-#  description: # Introducing intermediate level syntaxes that are useful. 
+# - title: Intermediate Syntaxes of Markdown
+#  description: Introducing intermediate level syntaxes that are useful. 
 #  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
-#  actions: # a list of the actions that will occur when the step is triggered by an event
+#  actions: pull_request
 #  - type: # the type of action, full list at https://lab.github.com/docs/actions
 
 # Step 5: Applications
-# - title: # Markdown Applications
-#  description: # goes over various platforms that are for markdown
-#  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
+# - title: Markdown Applications
+#  description: goes over various platforms that are for markdown
+#  event: issue_comment
 #  actions: # a list of the actions that will occur when the step is triggered by an event
 #  - type: # the type of action, full list at https://lab.github.com/docs/actions
 
