@@ -24,7 +24,7 @@ before:
 
 steps:
 Step 1: Introduction
-- title: Markdown Introduction
+- title: Markdown Introduction ---
   description: a simple introduction explaining what markdown is and what it is used for
   event: issue_comment
   actions: # a list of the actions that will occur when the step is triggered by an event
