@@ -29,7 +29,10 @@ steps:
   event: issue_comment
   actions: # a list of the actions that will occur when the step is triggered by an event
   - type: # the type of action, full list at https://lab.github.com/docs/actions
-
+  - type: gate
+    left: %payload.issue.title%
+    operator: ===
+    right: Add name to README
 # Step 2: Importance
 # - title: Importance of Markdown
 #  description: explanation of why markdown is an essential tool relating to individuals and companies
