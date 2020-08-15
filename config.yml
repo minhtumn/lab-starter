@@ -24,9 +24,9 @@ before:
 
 steps:
 # Step 1: Introduction
-- title: # Markdown Introduction
-  description: # a simple introduction explaining what markdown is and what it is used for
-  event: # the event that will trigger the actions to be executed, full list at https://developer.github.com/v3/activity/events/types/
+- title: Markdown Introduction
+  description: a simple introduction explaining what markdown is and what it is used for
+  event: issue_comment.created
   actions: # a list of the actions that will occur when the step is triggered by an event
   - type: # the type of action, full list at https://lab.github.com/docs/actions
 
