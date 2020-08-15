@@ -33,6 +33,12 @@ steps:
     left: %payload.issue.title%
     operator: ===
     right: Add name to README
+    else:
+    - type: respond
+      with: 01_try-again.md
+  - type: respond
+    with: 01_nice-work.md
+    
 # Step 2: Importance
 # - title: Importance of Markdown
 #  description: explanation of why markdown is an essential tool relating to individuals and companies
