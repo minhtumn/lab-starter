@@ -6,7 +6,7 @@ We will begin with introducing what exactly is markdown and its purpose.
 
 If there are concepts that should be described separately, they might belong in a subparagraph section like this one.
 
-## Step X: Description
+## Step 1: Description
 
 You will read through the provided information. Refer to the following steps on how to retrieve the information. 
 
