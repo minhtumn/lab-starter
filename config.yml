@@ -29,7 +29,7 @@ steps:
   event: issue_comment
   actions: # a list of the actions that will occur when the step is triggered by an event
   - type: gate
-    left: %payload.issue.title%
+  left: %payload.issue.title%
     operator: ===
     right: Add name to README
     else:
